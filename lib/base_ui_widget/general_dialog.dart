@@ -1,5 +1,4 @@
 
-import 'package:common_utils/l.dart';
 import 'package:flutter/material.dart';
 
 import '../route_utils.dart';

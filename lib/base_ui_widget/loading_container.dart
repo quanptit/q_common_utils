@@ -1,6 +1,7 @@
-import 'package:common_utils/base_ui_widget/v_error.dart';
-import 'package:common_utils/base_ui_widget/vloading.dart';
 import 'package:flutter/material.dart';
+
+import 'v_error.dart';
+import 'vloading.dart';
 
 
 /// hiển thị các trạng thái khi: Loading, Error/reload, No data
