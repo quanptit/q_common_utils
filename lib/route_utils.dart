@@ -56,6 +56,10 @@ class RouteUtils {
     //   },
     // );
   }
+
+  static createSlideRightRouteAllowDragToFinish({required WidgetBuilder builder}){
+    return CupertinoPageRouteCustom(builder: builder);
+  }
 }
 
 /// Alow WillPopScope work with CupertinoPageRoute

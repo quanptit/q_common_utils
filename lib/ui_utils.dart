@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 final GlobalKey<ScaffoldMessengerState> snackbarKey = GlobalKey<ScaffoldMessengerState>();
 
 class UiUtils {
+  /// Need add snackbarKey to Root MaterialApp for show no context
+  /// MaterialApp(
+  //          .....
+  //           scaffoldMessengerKey: snackbarKey,
+  //           home: const _HomeWidget(),
+  //         ),
   static showSnackBar(String text,
       {SnackBarBehavior behavior = SnackBarBehavior
           .floating, BuildContext? context, EdgeInsetsGeometry margin = const EdgeInsets.only(

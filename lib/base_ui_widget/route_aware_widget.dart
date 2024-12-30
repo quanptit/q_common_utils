@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Thêm observer vào MaterialApp if using this widget. MaterialApp(
+///     navigatorObservers: [routeObserver],
+// If using GoRoute thi them vao: final GoRouter router = GoRouter(observers: [routeObserver], ....
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
 class RouteAwareWidget extends StatefulWidget {

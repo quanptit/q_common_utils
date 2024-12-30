@@ -1,12 +1,17 @@
 import 'package:flutter/foundation.dart';
 
 class L {
-  static d(String? log) {
-    debugPrint(log);
+  // static var logger = Logger();
+
+  static d(dynamic log) {
+    if (kDebugMode) {
+      debugPrint(log);
+      // logger.d(log);
+    }
   }
 
-  static void e(Object err) {
-    // ignore: avoid_print
-    print("ERROR ============> $err");
+  static void e(dynamic err) {
+    // logger.e("ERROR ============> $err");
+    debugPrint("ERROR ============> $err");
   }
 }
