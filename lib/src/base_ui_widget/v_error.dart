@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../edge_s.dart';
+import '../common_utils/edge_s.dart';
 
 class VError extends StatelessWidget {
   final EdgeInsetsGeometry padding;
@@ -8,7 +8,7 @@ class VError extends StatelessWidget {
   /// if exits ==> show reload button
   final VoidCallback? reload;
 
-  const VError({Key? key, this.error, this.reload,  this.padding = const EdgeInsets.only(top: 30)}) : super(key: key);
+  const VError({super.key, this.error, this.reload,  this.padding = const EdgeInsets.only(top: 30)});
 
   @override
   Widget build(BuildContext context) {

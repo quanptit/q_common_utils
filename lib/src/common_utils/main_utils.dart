@@ -16,7 +16,7 @@ class MainUtils {
   static firstBaseSettingForMain() {
     FlutterError.onError = (details) {
       FlutterError.presentError(details);
-      L.e("FlutterError View Debug console for detail: "+details.toString());
+      L.e("FlutterError View Debug console for detail: ${details.toString()}");
     };
     HttpOverrides.global = MyHttpOverrides();
     WidgetsFlutterBinding.ensureInitialized();

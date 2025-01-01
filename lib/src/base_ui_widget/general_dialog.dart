@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../route_utils.dart';
+import '../common_utils/route_utils.dart';
 
 class GeneralDialog extends StatefulWidget {
   final Widget child;

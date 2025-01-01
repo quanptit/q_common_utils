@@ -5,10 +5,10 @@ class ValueListenableBuilder2<A, B> extends StatelessWidget {
   const ValueListenableBuilder2({
     required this.first,
     required this.second,
-    Key? key,
+    super.key,
     required this.builder,
     this.child,
-  }) : super(key: key);
+  });
 
   final ValueListenable<A> first;
   final ValueListenable<B> second;

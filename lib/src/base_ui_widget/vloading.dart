@@ -7,12 +7,12 @@ class VLoading extends StatelessWidget {
   final Color? colorProgress;
 
   const VLoading({
-    Key? key,
+    super.key,
     this.padding = const EdgeInsets.all(3),
     this.sizeProgressIndicator,
     this.isNotShowTextLoading,
     this.colorProgress
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
