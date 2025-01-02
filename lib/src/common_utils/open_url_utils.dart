@@ -21,10 +21,9 @@ class OpenUrlUtils {
     }
   }
 
-  static openStore(String packageName) async {
+  static openStore(String packageName, {String? appStoreId}) async {
     if (Platform.isAndroid) {
       LaunchMode mode = LaunchMode.externalApplication;
-      //TODOs ios
       String url = "market://details?id=$packageName";
       try {
         if (await launchUrlString(url, mode: mode)) return;
@@ -34,6 +33,11 @@ class OpenUrlUtils {
 
       url = "https://play.google.com/store/apps/details?id=$packageName";
       if (!await launchUrlString(url, mode: mode)) {
+        throw 'Could not launch $url';
+      }
+    }else if(Platform.isIOS && appStoreId!=null){
+      String url = 'https://apps.apple.com/app/id$appStoreId';
+      if (!await launchUrlString(url, mode: LaunchMode.externalApplication)) {
         throw 'Could not launch $url';
       }
     }
