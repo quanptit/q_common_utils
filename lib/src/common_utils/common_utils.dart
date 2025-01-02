@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 class CommonUtils {
+  CommonUtils._();
   static bool isEmpty(List? l) {
     if (l == null) return true;
     return l.isEmpty;
