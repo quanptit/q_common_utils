@@ -12,7 +12,6 @@ export 'src/common_utils/route_utils.dart';
 export 'src/common_utils/edge_s.dart';
 export 'src/common_utils/date_time_utils.dart';
 export 'src/common_utils/objs.dart';
-export 'src/common_utils/open_url_utils.dart';
 export 'src/common_utils/concurrent_task_utils.dart';
 export 'src/common_utils/countdown_timer_controller.dart';
 export 'src/common_utils/ui_utils.dart';

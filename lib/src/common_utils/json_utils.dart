@@ -33,4 +33,6 @@ class JsonUtils {
       throw Exception(e.toString());
     }
   }
+
+  JsonUtils._();
 }
