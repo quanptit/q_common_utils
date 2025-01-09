@@ -32,7 +32,7 @@ class UiUtils {
   static Future<bool?> showDialogInfo(BuildContext context, {String? title, required String content}) {
     return showAlertDialog(context, content: content, title: title, actions: [TextButton(onPressed: () {
       Navigator.of(context).pop(true);
-    }, child: Text("OK"))
+    }, child: const Text("OK"))
     ]);
   }
 

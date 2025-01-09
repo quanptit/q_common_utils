@@ -17,8 +17,7 @@ class RouteAwareWidget extends StatefulWidget {
    /// Called when a new route has been pushed, and the current route is no longer visible. ==> PAUSE
   final VoidCallback? didPushNext;
 
-  const RouteAwareWidget({Key? key, required this.child, this.didPush, this.didPopNext, this.didPop, this.didPushNext})
-      : super(key: key);
+  const RouteAwareWidget({super.key, required this.child, this.didPush, this.didPopNext, this.didPop, this.didPushNext});
 
   @override
   State<RouteAwareWidget> createState() => _RouteAwareWidgetState();

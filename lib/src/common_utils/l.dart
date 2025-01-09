@@ -27,9 +27,9 @@ class L {
     }
   }
 
-  static void e(dynamic err) {
+  static void e(dynamic err, {stackTrace}) {
     if (err is Error) {
-      logger.e("ERROR ============> $err", error: err, stackTrace: err.stackTrace);
+      logger.e("ERROR ============> $err", error: err, stackTrace: err.stackTrace??stackTrace);
     } else {
       logger.e("ERROR ============> $err");
     }

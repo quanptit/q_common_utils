@@ -12,8 +12,8 @@ class JsonUtils {
             (String message) => (jsonDecode(message) as List).map((jsonObj) => fromJson(jsonObj)).toList(),
         responseBody,
       );
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     } catch (e) {
       throw Exception(e.toString());
     }
@@ -27,8 +27,8 @@ class JsonUtils {
             (String message) => fromJson(jsonDecode(responseBody)),
         responseBody,
       );
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     } catch (e) {
       throw Exception(e.toString());
     }

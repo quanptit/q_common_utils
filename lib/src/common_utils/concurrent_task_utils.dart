@@ -3,6 +3,8 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 
+import 'l.dart';
+
 class ConcurrentTaskUtils<A, B> {
   int maxConcurrentTasks;
   int _runningTasks = 0;
@@ -26,10 +28,10 @@ class ConcurrentTaskUtils<A, B> {
       return;
     }
     _runningTasks++;
-    print('Concurrent workers: $_runningTasks');
+    L.d('Concurrent workers: $_runningTasks');
     task(_input.removeFirst()).whenComplete(() {
       _runningTasks--;
-      print('Concurrent workers: $_runningTasks');
+      L.d('Concurrent workers: $_runningTasks');
       if (completeAllTask!=null && _runningTasks <= 0 && _input.isEmpty) {
         completeAllTask?.call();
       }

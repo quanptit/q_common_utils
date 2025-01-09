@@ -26,4 +26,5 @@ class LanguagesUtils {
     // debugPrint('device localeName: $localeName');
     return localeName.contains(RegExp("vi|vn|vietnam"));
   }
+  LanguagesUtils._();
 }

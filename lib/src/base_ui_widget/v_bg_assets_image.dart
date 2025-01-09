@@ -6,7 +6,7 @@ class VBgAssetsImage extends StatelessWidget {
   final String assetsPath;
   final Widget child;
 
-  const VBgAssetsImage({Key? key, required this.assetsPath, required this.child}) : super(key: key);
+  const VBgAssetsImage({super.key, required this.assetsPath, required this.child});
 
   @override
   Widget build(BuildContext context) {

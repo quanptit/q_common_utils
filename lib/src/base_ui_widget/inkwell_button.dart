@@ -6,11 +6,11 @@ class InkWellButton extends StatelessWidget {
   final BorderRadius? borderRadius;
   final bool isAddInkWellOnTop;
 
-  InkWellButton({super.key, this.onTap, required this.child, this.borderRadius, this.isAddInkWellOnTop = false});
+  const InkWellButton({super.key, this.onTap, required this.child, this.borderRadius, this.isAddInkWellOnTop = false});
 
   @override
   Widget build(BuildContext context) {
-    if (isAddInkWellOnTop)
+    if (isAddInkWellOnTop) {
       return Stack(
         alignment: Alignment.center,        
         children: [
@@ -28,6 +28,7 @@ class InkWellButton extends StatelessWidget {
             ),
         ],
       );
+    }
 
     return Material(
       borderRadius: borderRadius,

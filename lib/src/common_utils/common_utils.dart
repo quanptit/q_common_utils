@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'l.dart';
@@ -53,11 +52,11 @@ class CommonUtils {
 
   //region DataType Convert
   static int? intParse(String? source) {
-    return source == null ? null : int.tryParse(source!);
+    return source == null ? null : int.tryParse(source);
   }
 
   static double? doubleParse(String? source) {
-    return source == null ? null : double.tryParse(source!);
+    return source == null ? null : double.tryParse(source);
   }
 
 //endregion
@@ -100,4 +99,12 @@ class CommonUtils {
     }
   }
 //endregion
+
+  static uriFromAssets(fullPath) {
+    return Uri(path: fullPath, scheme: "assets");
+  }
+
+  static bool uriIsAssets(Uri uri) {
+    return (uri.scheme == 'assets' || uri.path.startsWith('assets/'));
+  }
 }
