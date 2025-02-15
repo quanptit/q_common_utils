@@ -51,4 +51,5 @@ class UiUtils {
       },
     );
   }
+  UiUtils._();
 }

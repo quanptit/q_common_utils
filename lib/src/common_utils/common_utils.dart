@@ -61,7 +61,7 @@ class CommonUtils {
 
 //endregion
 
-//region open url
+  //region open url
   static openUrlWithExternalApplication(String url) {
     openUrl(url, mode: LaunchMode.externalApplication);
   }
@@ -98,6 +98,7 @@ class CommonUtils {
       }
     }
   }
+
 //endregion
 
   static uriFromAssets(fullPath) {
@@ -105,6 +106,17 @@ class CommonUtils {
   }
 
   static bool uriIsAssets(Uri uri) {
-    return (uri.scheme == 'assets' || uri.path.startsWith('assets/'));
+    return (uri.scheme == 'assets' || uri.toString().startsWith('assets/'));
+  }
+
+  /// Kiểm tra nếu URI là một file (có scheme là 'file' hoặc là đường dẫn local)
+  static bool uriIsFile(Uri uri) {
+    final path = uri.toString();
+    return uri.scheme == 'file' || (path.startsWith("file://"));
+  }
+
+  static bool uriIsUrl(Uri uri) {
+    // Kiểm tra nếu URI là một URL (HTTP hoặc HTTPS)
+    return uri.scheme == 'http' || uri.scheme == 'https';
   }
 }

@@ -32,3 +32,16 @@ class VoidCallbackResultWrap {
     _callback();
   }
 }
+
+mixin Cloneable<T>{
+  Cloneable<T> clone();
+}
+
+enum SliverType{list, grig}
+/// Xác định render một list hay grid cho customscrollview
+class SliverItemModel {
+  final SliverType sliverType;
+  final  List<Object> list;
+
+  SliverItemModel({required this.sliverType, required this.list});
+}
