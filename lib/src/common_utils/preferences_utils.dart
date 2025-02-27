@@ -56,4 +56,8 @@ class PreferencesUtils {
     }
     return (await _getInstance()).setStringList(key, list);
   }
+
+  static Future<bool> remove(String key) async {
+    return (await _getInstance()).remove(key);
+  }
 }
